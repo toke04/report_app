@@ -17,6 +17,8 @@
       <%= link_to 'プロフィール変更', edit_user_registration_path %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { "turbo-method": :delete }
       %>
+      <%= image_tag User.first.image, size: "90x75" %>
+      <h1><%=  User.first.name %></h1>
     <% else %>
       <%= link_to 'サインアップ', new_user_registration_path %>
       <%= link_to 'ログイン', new_user_session_path %>
